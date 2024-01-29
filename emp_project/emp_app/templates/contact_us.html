@@ -1,0 +1,47 @@
+{% extends 'homebase.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+</head>
+<body>
+    <h1 align="center">contact info</h1>
+   <form method="POST" action="#">
+    {% csrf_token %}
+    <table border="2px" align="center">
+       <tr>
+          <th>name :</th>
+          <td><input type="text" placeholder="Enter your name" id="name" name="name"></td>
+       </tr>
+       <tr>
+         <th>surname :</th>
+         <td><input type="text" placeholder="Enter your surname" id="surname" name="surname"></td>
+      </tr>
+      <tr>
+         <th>phone :</th>
+         <td><input type="number" placeholder="enter your phone" id="phone" name="phone"></td>
+      </tr>
+      <tr>
+         <th>email :</th>
+         <td><input type="email" placeholder="email" id="email" name="email"></td>
+      </tr>
+      <tr>
+         <th>message :</th>
+         <td><textarea rows="4" placeholder="Enter Your message" id="msg" name="msg"></textarea></td>
+      </tr>
+      <tr>
+         <td colspan="2px" align="center">
+          <input type="submit" value="submit">
+        </td>
+      </tr>
+    </table>
+ </form><br><br>
+
+{% endblock content%}
